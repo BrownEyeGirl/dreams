@@ -39,8 +39,18 @@ text-shadow: 0 0 20px rgba(0,0,0,0.1);
 
  <script>
 
+  const bgm = window.parent.document.getElementById('bgm');
+
+  window.addEventListener('load', () => {
+    bgm = window.parent.document.getElementById('bgm');
+    if (bgm && bgm.paused) bgm.play();
+  });
+
   document.addEventListener("keydown", (event) => {
   if (event.code === "Space") {
+    
+
+
     setTimeout(() => { 
 
 window.parent.document.getElementById('frame').src = "dream2.html";
@@ -52,7 +62,7 @@ window.parent.document.getElementById('frame').src = "dream2.html";
 </script>
   </head>
   <body style="background-color: black;">
-    <p style="color:white; position:absolute">1/6</p>
+
     <div id="fade"></div>
 
     <div id="rever">Rêver</div>
@@ -320,6 +330,7 @@ controls.maxPolarAngle = Math.PI * 0.48;
 controls.minDistance = 20;
 controls.maxDistance = 5000;
 controls.update();
+controls.enabled = false;
 
 // ── Resize ────────────────────────────────────────────────────────────────────
 window.addEventListener('resize', () => {
