@@ -22,14 +22,11 @@
 
  <script>
 
-  document.addEventListener("keydown", (event) => {
+ document.addEventListener("keydown", (event) => {
   if (event.code === "Space") {
-    
-
 
     setTimeout(() => { 
-       
-window.parent.document.getElementById('frame').src = "dream3.html";
+       window.location.href = "dream3.html";
     }, 200);
   }
 

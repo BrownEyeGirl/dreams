@@ -26,6 +26,17 @@
     const bgm = window.parent.document.getElementById('bgm');
     if (bgm && bgm.paused) bgm.play();
   });
+
+  document.addEventListener("keydown", (event) => {
+  if (event.code === "Space") {
+
+    setTimeout(() => { 
+       window.location.href = "scene4.html";
+    }, 200);
+  }
+
+});
+  
 </script>
 <div id="wrap">
   <canvas id="c"></canvas>
