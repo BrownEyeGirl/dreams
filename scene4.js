@@ -46,7 +46,7 @@ document.body.appendChild(fadeOverlay);
 // trigger fade after a short delay (or call whenever you want)
 setTimeout(() => {
   fadeOverlay.style.opacity = "0";
-}, 500);
+}, 1000);
 
 
 // create scene 
